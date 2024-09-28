@@ -1,11 +1,10 @@
 {
 	"id": "textgrams",
 	"name": "Textgrams",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "ASCII diagrams in your notes",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"version": "0.5.0",
+	"minAppVersion": "1.5.0",
+	"description": "Store and visualise ASCII graphics and charts",
+	"author": "Akop Kesheshyan",
+	"authorUrl": "https://github.com/akopdev",
 	"isDesktopOnly": false
 }

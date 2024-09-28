@@ -2,11 +2,11 @@ import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Set
 import create from "typograms/src/typograms.js";
 
 interface TextgramsSettings {
-	mySetting: string;
+	zoom: number;
 }
 
 const DEFAULT_SETTINGS: TextgramsSettings = {
-	mySetting: 'default'
+	zoom: 1
 }
 
 export default class Textgrams extends Plugin {
@@ -16,7 +16,7 @@ export default class Textgrams extends Plugin {
 		await this.loadSettings();
 
 		this.registerMarkdownCodeBlockProcessor("textgram", (source, el, ctx) => {
-			const svg = create("\n" + source + "\n", 1, false);
+			const svg = create("\n" + source + "\n", this.settings.zoom, false);
 			el.addClass("textgram");
 			el.appendChild(svg);
 		});
@@ -47,13 +47,13 @@ class TextgramsSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Setting #1')
-			.setDesc('It\'s a secret')
+			.setName('Zoom level')
+			.setDesc('Zoom level for textgrams. Default is 1 and it works best for most cases.')
 			.addText(text => text
-				.setPlaceholder('Enter your secret')
-				.setValue(this.plugin.settings.mySetting)
+				.setPlaceholder('Default: 1')
+				.setValue(this.plugin.settings.zoom)
 				.onChange(async (value) => {
-					this.plugin.settings.mySetting = value;
+					this.plugin.settings.zoom = value;
 					await this.plugin.saveSettings();
 				}));
 	}
