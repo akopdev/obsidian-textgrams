@@ -8,6 +8,8 @@ in technical documentation, that will be rendered as a nice SVG graphics in the 
 This plug-in is based on [typograms](https://github.com/google/typograms) library, originally
 developed by [Sam Goto](https://code.sgo.to/2022/06/20/typographic-diagrams.html).
 
+![Obsidian Textgrams plugin example](docs/cover.gif)
+
 ## Motivation
 
 I'm a software engineer and I use Obsidian to document my projects, as long as support my 
@@ -38,7 +40,7 @@ Just create a code block with `textgram` language and write your ASCII graphics 
 
 Example:
 
-```
+<pre>
 ```textgram
 +-----+            +-----+
 |  A  |            |  B  |
@@ -51,8 +53,8 @@ Example:
    |<-----------------|--+
    |                  |
  --+--              --+--
-\```
 ```
+</pre>
 
 You can find more examples [here](docs/examples.md).
 
