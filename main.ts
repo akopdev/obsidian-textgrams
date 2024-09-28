@@ -2,11 +2,11 @@ import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Set
 import create from "typograms/src/typograms.js";
 
 interface TextgramsSettings {
-	zoom: number;
+	zoom: string;
 }
 
 const DEFAULT_SETTINGS: TextgramsSettings = {
-	zoom: 1
+	zoom: "1"
 }
 
 export default class Textgrams extends Plugin {
@@ -16,7 +16,7 @@ export default class Textgrams extends Plugin {
 		await this.loadSettings();
 
 		this.registerMarkdownCodeBlockProcessor("textgram", (source, el, ctx) => {
-			const svg = create("\n" + source + "\n", this.settings.zoom, false);
+			const svg = create("\n" + source + "\n", +this.settings.zoom, false);
 			el.addClass("textgram");
 			el.appendChild(svg);
 		});
