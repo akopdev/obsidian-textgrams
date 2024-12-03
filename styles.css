@@ -1,6 +1,43 @@
 .textgram svg {
-	max-width: 100%;
-	padding: 20px;
-	height: auto;
-	background: #fff;
+  max-width: 100%;
+  padding: 20px;
+  height: auto;
+}
+.textgram .diagram line,
+.textgram .diagram circle,
+.textgram .diagram rect {
+  stroke: currentColor;
+}
+.textgram .debug[debug=true] .reserved {
+  fill: currentColor;
+}
+.textgram .debug[debug=true] line.grid {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.textgram .debug[debug=true] polygon.inner {
+  fill: currentColor;
+  stroke: currentColor;
+}
+.textgram polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.textgram line.part {
+  stroke: currentColor;
+}
+.textgram .debug[debug=true] line.center {
+  stroke: currentColor;
+}
+.textgram text:not(.reserved) {
+  fill: currentColor;
+}
+.textgram text::selection {
+  fill: currentColor;
+}
+.textgram path {
+  fill: currentColor;
+}
+.textgram circle {
+  fill: currentColor;
 }

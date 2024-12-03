@@ -1,0 +1,60 @@
+$color: currentColor;
+
+.textgram {
+	svg {
+		max-width: 100%;
+		padding: 20px;
+		height: auto;
+	}
+
+	.diagram line,
+	.diagram circle,
+	.diagram rect {
+		stroke: $color;
+	}
+
+
+	.debug[debug="true"] .reserved {
+		fill: $color;
+	}
+
+	.debug[debug="true"] line.grid {
+		stroke: $color;
+		fill: $color;
+	}
+
+
+	.debug[debug="true"] polygon.inner {
+		fill: $color;
+		stroke: $color;
+	}
+
+	polygon {
+		stroke: $color;
+		fill: $color;
+	}
+
+	line.part {
+		stroke: $color;
+	}
+
+	.debug[debug="true"] line.center {
+		stroke: $color;
+	}
+
+	text:not(.reserved) {
+		fill: $color;
+	}
+
+	text::selection {
+		fill: $color;
+	}
+
+	path {
+		fill: $color;
+	}
+
+	circle {
+		fill: $color;
+	}
+}

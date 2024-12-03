@@ -1,7 +1,7 @@
 {
 	"id": "textgrams",
 	"name": "Textgrams",
-	"version": "0.5.1",
+	"version": "0.6.0",
 	"minAppVersion": "1.5.0",
 	"description": "Store and visualise ASCII graphics and charts",
 	"author": "Akop Kesheshyan",
